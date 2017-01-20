@@ -13,6 +13,12 @@ Ubuntu 16.04
 
 <table>
   <tr>
+    <th><tt>Key</tt></th>
+    <th>Type</th>
+    <th>Description</th>
+    <th><tt>Default</tt></th>
+  </tr>
+  <tr>
     <th><tt>['magnolia']['version']</tt></th>
     <th>String</th>
     <th>Magnolia Version</th>
