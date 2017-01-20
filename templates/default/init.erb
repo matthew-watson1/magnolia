@@ -1,0 +1,22 @@
+#Magnolia init upstart script
+
+description "magnolia"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+expect stop
+respawn
+
+pre-start script
+  PID="$( ps axf | grep  java | grep magnolia | grep -v grep | awk '{print $1}' )"
+  if [ ! -z $PID ] ; then
+    stop ; exit 0
+  fi
+end script
+
+exec /opt/magnolia/apache-tomcat-8.5.5/bin/magnolia_control.sh start --ignore-open-files-limit
+
+post-stop script
+  PID="$( ps axf | grep  java | grep magnolia | grep -v grep | awk '{print $1}' )"
+  kill -9 $PID
+end script

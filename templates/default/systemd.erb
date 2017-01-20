@@ -1,0 +1,6 @@
+[Unit]
+Description=magnolia web server
+
+[Service]
+Type=forking
+ExecStart=/opt/magnolia/apache-tomcat-8.5.5/bin/magnolia_control.sh start --ignore-open-files-limit

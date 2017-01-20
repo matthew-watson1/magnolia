@@ -1,29 +1,44 @@
 # magnolia-cookbook
 
-TODO: Enter the cookbook description here.
+Install Java 8 and Magnolia CMS (www.magnolia-cms.com)
+
+Note: 
+- The Author/Public instance installations have to be done via the browser
+- License Key also has to be added using the browser
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Ubuntu 16.04
 
 ## Attributes
 
 <table>
   <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
+    <th><tt>['magnolia']['version']</tt></th>
+    <th>String</th>
+    <th>Magnolia Version</th>
+    <th><tt>5.5.1</tt></th>
   </tr>
   <tr>
-    <td><tt>['magnolia']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <th><tt>['magnolia']['url']</tt></th>
+    <th>String</th>
+    <th>Magnolia Package URL</th>
+    <th><tt>http://files.magnolia-cms.com/5.5.1/magnolia-enterprise-pro-demo-bundle-5.5.1-tomcat-bundle.zip</tt></th>
+  </tr>
+  <tr>
+    <th><tt>['magnolia']['dir']</tt></th>
+    <th>String</th>
+    <th>Magnolia Top Level Directory</th>
+    <th><tt>/opt/magnolia</tt></th>
   </tr>
 </table>
 
 ## Usage
+
+```
+kitchen create default-ubuntu-1604
+kitchen converge default-ubuntu-1604
+```
 
 ### magnolia::default
 
@@ -39,4 +54,4 @@ Include `magnolia` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Matthew Watson (matthew.watson1@sainsburys.co.uk)

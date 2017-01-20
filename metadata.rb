@@ -1,9 +1,10 @@
 name             'magnolia'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Matthew Watson'
+maintainer_email 'matthew.watson1@sainsburys.co.uk'
 license          'All rights reserved'
 description      'Installs/Configures magnolia'
 long_description 'Installs/Configures magnolia'
 version          '0.1.0'
 
-cookbook 'java', '~> 1.46.0'
+depends 'java', '~> 1.46.0'
+depends 'poise-archive'
