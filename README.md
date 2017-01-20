@@ -3,8 +3,7 @@
 Install Java 8 and Magnolia CMS (www.magnolia-cms.com)
 
 Note: 
-- The Author/Public instance installations have to be done via the browser
-- License Key also has to be added using the browser
+- The Author/Public installation and adding the License Key has to be done via the browser
 
 ## Supported Platforms
 
